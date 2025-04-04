@@ -3,7 +3,7 @@
   <entry>
     <title>vim-shortcut-key</title>
     <url>/2025/04/04/vim-shortcut-key-1/</url>
-    <content><![CDATA[<h2 id="vim键盘图"><a href="#vim键盘图" class="headerlink" title="vim键盘图"></a>vim键盘图</h2><p><img src="/.io//_posts/vim-shortcut-key-1/image.jpg" alt="vim键盘图"></p>
+    <content><![CDATA[<h2 id="vim键盘图"><a href="#vim键盘图" class="headerlink" title="vim键盘图"></a>vim键盘图</h2><p><img src="/home/spinoza/code/blog/source/images/image.jpg" alt="vim键盘图"></p>
 <h3 id="vim快捷键"><a href="#vim快捷键" class="headerlink" title="vim快捷键"></a>vim快捷键</h3><h4 id="如何使用vimv"><a href="#如何使用vimv" class="headerlink" title="如何使用vimv"></a>如何使用vimv</h4><p>在终端中输入<code>vim</code>命令，进入vim编辑器。vim有三种模式：普通模式、插入模式和命令模式。</p>
 <ul>
 <li>普通模式：默认模式，可以使用各种快捷键进行文本编辑。</li>
