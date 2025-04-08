@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>vim快捷键</title>
-    <url>/2025/04/04/vim-shortcut-key/</url>
+    <url>/2025/04/04/vim-shortcut-keys/</url>
     <content><![CDATA[<h2 id="vim键盘图"><a href="#vim键盘图" class="headerlink" title="vim键盘图"></a>vim键盘图</h2><p><img src="/images/image.jpg" alt="vim键盘图"></p>
 <span id="more"></span>
 <h3 id="vim快捷键"><a href="#vim快捷键" class="headerlink" title="vim快捷键"></a>vim快捷键</h3><h4 id="如何使用vimv"><a href="#如何使用vimv" class="headerlink" title="如何使用vimv"></a>如何使用vimv</h4><p>在终端中输入<code>vim</code>命令，进入vim编辑器。vim有三种模式：普通模式、插入模式和命令模式。</p>
@@ -265,5 +265,10 @@
       <tags>
         <tag>快捷键说明</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>vscode-shortcut-keys</title>
+    <url>/2025/04/08/vscode-shortcut-keys/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
