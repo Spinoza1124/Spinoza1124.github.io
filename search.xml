@@ -88,6 +88,7 @@
 <ul>
 <li>文档注释可以用于函数、类、变量等的描述，方便生成API文档。</li>
 </ul>
+<span id="more"></span>
 <h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
 <li>变量声明：<code>int a;</code></li>
 <li>变量初始化：<code>int a = 10;</code></li>

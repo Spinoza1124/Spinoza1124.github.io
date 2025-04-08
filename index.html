@@ -208,7 +208,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-08 20:20:09 / 修改时间：20:31:16" itemprop="dateCreated datePublished" datetime="2025-04-08T20:20:09+08:00">2025-04-08</time>
+              <time title="创建时间：2025-04-08 20:20:09 / 修改时间：20:32:11" itemprop="dateCreated datePublished" datetime="2025-04-08T20:20:09+08:00">2025-04-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -251,82 +251,14 @@
 <ul>
 <li>文档注释可以用于函数、类、变量等的描述，方便生成API文档。</li>
 </ul>
-<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
-<li>变量声明：<code>int a;</code></li>
-<li>变量初始化：<code>int a = 10;</code></li>
-<li>变量赋值：<code>a = 20;</code></li>
-<li>变量类型：<code>int</code>、<code>float</code>、<code>double</code>、<code>char</code>、<code>bool</code>等</li>
-<li>常量声明：<code>const int MAX = 100;</code></li>
-<li>常量初始化：<code>const int MAX = 100;</code></li>
-<li>常量赋值：<code>MAX = 200;</code> &#x2F;&#x2F; 错误，常量不能被修改</li>
-<li>常量类型：<code>const int</code>、<code>const float</code>、<code>const double</code>、<code>const char</code>、<code>const bool</code>等</li>
-<li>常量的作用域：常量的作用域与变量相同，可以是全局的或局部的。</li>
-<li>常量的命名：常量的命名通常使用大写字母和下划线分隔，例如<code>MAX_VALUE</code>。</li>
-<li>常量的使用：常量可以用于定义数组大小、循环次数等场景，避免魔法数字的出现，提高代码可读性。</li>
-<li>常量的优点：常量可以提高代码的可读性和可维护性，避免了魔法数字的出现。</li>
-<li>常量的缺点：常量的值在编译时确定，不能在运行时修改，可能导致灵活性不足。</li>
-<li>常量的使用场景：常量通常用于定义一些固定的值，例如数学常数、配置参数等。</li>
-<li>常量的命名规范：常量的命名通常使用大写字母和下划线分隔，例如<code>MAX_VALUE</code>，以便于区分变量和常量。</li>
-</ul>
-<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ul>
-<li>基本数据类型：<code>int</code>、<code>float</code>、<code>double</code>、<code>char</code>、<code>bool</code></li>
-<li>复合数据类型：<code>struct</code>、<code>union</code>、<code>enum</code></li>
-<li>指针类型：<code>int*</code>、<code>float*</code>、<code>char*</code></li>
-<li>引用类型：<code>int&amp;</code>、<code>float&amp;</code>、<code>char&amp;</code></li>
-<li>数组类型：<code>int[]</code>、<code>float[]</code>、<code>char[]</code></li>
-<li>字符串类型：<code>std::string</code></li>
-<li>STL容器类型：<code>std::vector</code>、<code>std::list</code>、<code>std::map</code></li>
-<li>自定义数据类型：<code>class</code>、<code>struct</code></li>
-<li>基本数据类型的大小：<code>sizeof(int)</code>、<code>sizeof(float)</code>、<code>sizeof(double)</code>、<code>sizeof(char)</code>、<code>sizeof(bool)</code></li>
-<li>基本数据类型的范围：<code>INT_MIN</code>、<code>INT_MAX</code>、<code>FLOAT_MIN</code>、<code>FLOAT_MAX</code>、<code>DOUBLE_MIN</code>、<code>DOUBLE_MAX</code></li>
-<li>基本数据类型的默认值：<code>int</code>默认为0，<code>float</code>默认为0.0，<code>double</code>默认为0.0，<code>char</code>默认为’\0’，<code>bool</code>默认为false</li>
-<li>基本数据类型的初始化：<code>int a = 10;</code>、<code>float b = 3.14;</code>、<code>double c = 2.718;</code>、<code>char d = &#39;A&#39;;</code>、<code>bool e = true;</code></li>
-<li>基本数据类型的赋值：<code>a = 20;</code>、<code>b = 2.71;</code>、<code>c = 3.14;</code>、<code>d = &#39;B&#39;;</code>、<code>e = false;</code></li>
-<li>基本数据类型的使用：<code>std::cout &lt;&lt; a;</code>、<code>std::cin &gt;&gt; b;</code>、<code>std::cout &lt;&lt; c;</code>、<code>std::cin &gt;&gt; d;</code>、<code>std::cout &lt;&lt; e;</code></li>
-<li>基本数据类型的转换：<code>int</code>转<code>float</code>：<code>float f = (float)a;</code>、<code>float</code>转<code>int</code>：<code>int g = (int)b;</code></li>
-<li>基本数据类型的转换：<code>int</code>转<code>double</code>：<code>double h = (double)a;</code>、<code>double</code>转<code>int</code>：<code>int i = (int)c;</code></li>
-<li>基本数据类型的转换：<code>float</code>转<code>double</code>：<code>double j = (double)b;</code>、<code>double</code>转<code>float</code>：<code>float k = (float)c;</code></li>
-<li>基本数据类型的转换：<code>char</code>转<code>int</code>：<code>int l = (int)d;</code>、<code>int</code>转<code>char</code>：<code>char m = (char)a;</code></li>
-<li>基本数据类型的转换：<code>bool</code>转<code>int</code>：<code>int n = (int)e;</code>、<code>int</code>转<code>bool</code>：<code>bool o = (bool)a;</code></li>
-<li>基本数据类型的转换：<code>char</code>转<code>float</code>：<code>float p = (float)d;</code>、<code>float</code>转<code>char</code>：<code>char q = (char)b;</code></li>
-<li>基本数据类型的转换：<code>char</code>转<code>double</code>：<code>double r = (double)d;</code>、<code>double</code>转<code>char</code>：<code>char s = (char)c;</code></li>
-<li>基本数据类型的转换：<code>bool</code>转<code>float</code>：<code>float t = (float)e;</code>、<code>float</code>转<code>bool</code>：<code>bool u = (bool)b;</code></li>
-<li>基本数据类型的转换：<code>bool</code>转<code>double</code>：<code>double v = (double)e;</code>、<code>double</code>转<code>bool</code>：<code>bool w = (bool)c;</code></li>
-<li>基本数据类型的转换：<code>bool</code>转<code>char</code>：<code>char x = (char)e;</code>、<code>char</code>转<code>bool</code>：<code>bool y = (bool)d;</code></li>
-<li>基本数据类型的转换：<code>int</code>转<code>bool</code>：<code>bool z = (bool)a;</code>、<code>bool</code>转<code>int</code>：<code>int aa = (int)e;</code></li>
-<li>基本数据类型的转换：<code>float</code>转<code>bool</code>：<code>bool ab = (bool)b;</code>、<code>bool</code>转<code>float</code>：<code>float ac = (float)e;</code></li>
-<li>基本数据类型的转换：<code>double</code>转<code>bool</code>：<code>bool ad = (bool)c;</code>、<code>bool</code>转<code>double</code>：<code>double ae = (double)e;</code></li>
-<li>基本数据类型的转换：<code>char</code>转<code>bool</code>：<code>bool af = (bool)d;</code>、<code>bool</code>转<code>char</code>：<code>char ag = (char)e;</code></li>
-<li>基本数据类型的转换：<code>int</code>转<code>char</code>：<code>char ah = (char)a;</code>、<code>char</code>转<code>int</code>：<code>int ai = (int)d;</code></li>
-<li>基本数据类型的转换：<code>float</code>转<code>char</code>：<code>char aj = (char)b;</code>、<code>char</code>转<code>float</code>：<code>float ak = (float)d;</code></li>
-<li>基本数据类型的转换：<code>double</code>转<code>char</code>：<code>char al = (char)c;</code>、<code>char</code>转<code>double</code>：<code>double am = (double)d;</code></li>
-</ul>
-<h4 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h4><h1 id="举个例子说明"><a href="#举个例子说明" class="headerlink" title="举个例子说明"></a>举个例子说明</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> globalVar = <span class="number">10</span>; <span class="comment">// 全局变量</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> localVar = <span class="number">20</span>; <span class="comment">// 局部变量</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Local variable: &quot;</span> &lt;&lt; localVar &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Global variable: &quot;</span> &lt;&lt; globalVar &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">function</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Global variable: &quot;</span> &lt;&lt; globalVar &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// cout &lt;&lt; &quot;Local variable: &quot; &lt;&lt; localVar &lt;&lt; endl; // 错误，localVar在这里不可见</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>在上面的例子中，<code>globalVar</code>是一个全局变量，可以在整个程序中访问。</li>
-<li><code>localVar</code>是一个局部变量，只能在<code>function</code>函数内部访问。</li>
-<li>在<code>main</code>函数中，尝试访问<code>localVar</code>会导致编译错误，因为它在<code>main</code>函数的作用域内不可见。</li>
-<li>变量的作用域决定了变量在程序中的可见性和生命周期。</li>
-<li>全局变量在整个程序中可见，生命周期从程序开始到结束。</li>
-<li>局部变量在函数内部可见，生命周期从函数调用开始到函数返回结束。</li>
-<li>变量的作用域可以通过使用<code>static</code>关键字来限制，例如：</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">static</span> <span class="type">int</span> staticVar = <span class="number">30</span>; <span class="comment">// 静态全局变量</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> staticLocalVar = <span class="number">40</span>; <span class="comment">// 静态局部变量</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Static local variable: &quot;</span> &lt;&lt; staticLocalVar &lt;&lt; endl;</span><br><span class="line">    staticLocalVar++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">function</span>();</span><br><span class="line">    <span class="built_in">function</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Static global variable: &quot;</span> &lt;&lt; staticVar &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在上面的例子中，<code>staticVar</code>是一个静态全局变量，可以在整个程序中访问，但它的值在程序运行期间保持不变。</li>
-<li><code>staticLocalVar</code>是一个静态局部变量，它的值在函数调用之间保持不变。</li>
-<li>静态变量的生命周期从程序开始到结束，但它的作用域限制在定义它的函数内部。</li>
-<li>静态变量的值在函数调用之间保持不变，可以用于保存函数的状态。</li>
-<li>静态变量的作用域限制在定义它的函数内部，但它的生命周期从程序开始到结束。</li>
-<li>静态变量的优点是可以在函数调用之间保持状态，避免了全局变量的使用。</li>
-<li>静态变量的缺点是作用域限制在定义它的函数内部，可能导致代码可读性降低。</li>
-<li>静态变量的使用场景：静态变量通常用于保存函数的状态，例如计数器、缓存等。</li>
-<li>静态变量的命名规范：静态变量的命名通常使用小写字母和下划线分隔，例如<code>static_var</code>，以便于区分全局变量和静态变量。</li>
-<li>静态变量的初始化：静态变量的初始化通常在定义时进行，例如<code>static int staticVar = 0;</code>，也可以在函数内部进行初始化，例如<code>static int staticLocalVar = 0;</code>。</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/04/08/cpp-notebook/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
