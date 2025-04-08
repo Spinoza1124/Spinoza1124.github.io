@@ -197,7 +197,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/04/04/vim-shortcut-key/" class="post-title-link" itemprop="url">vim-shortcut-key</a>
+            <a href="/2025/04/04/vim-shortcut-key/" class="post-title-link" itemprop="url">vim快捷键</a>
         </h2>
 
         <div class="post-meta">
@@ -206,10 +206,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-04-04 23:02:38 / 修改时间：23:21:26" itemprop="dateCreated datePublished" datetime="2025-04-04T23:02:38+08:00">2025-04-04</time>
+              <time title="创建时间：2025-04-04 23:02:38" itemprop="dateCreated datePublished" datetime="2025-04-04T23:02:38+08:00">2025-04-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-08 10:51:18" itemprop="dateModified" datetime="2025-04-08T10:51:18+08:00">2025-04-08</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -232,260 +238,14 @@
 
       
           <h2 id="vim键盘图"><a href="#vim键盘图" class="headerlink" title="vim键盘图"></a>vim键盘图</h2><p><img src="/images/image.jpg" alt="vim键盘图"></p>
-<h3 id="vim快捷键"><a href="#vim快捷键" class="headerlink" title="vim快捷键"></a>vim快捷键</h3><h4 id="如何使用vimv"><a href="#如何使用vimv" class="headerlink" title="如何使用vimv"></a>如何使用vimv</h4><p>在终端中输入<code>vim</code>命令，进入vim编辑器。vim有三种模式：普通模式、插入模式和命令模式。</p>
-<ul>
-<li>普通模式：默认模式，可以使用各种快捷键进行文本编辑。</li>
-<li>插入模式：用于输入文本，可以使用<code>i</code>、<code>a</code>等命令进入。</li>
-<li>命令模式：用于执行命令，可以使用<code>:</code>进入。<br>在普通模式下，按<code>i</code>进入插入模式，按<code>Esc</code>返回普通模式。<br>在插入模式下，按<code>Esc</code>返回普通模式，按<code>:</code>进入命令模式。<br>在命令模式下，可以输入各种命令，如保存、退出等。</li>
-</ul>
-<h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p>在命令模式下，可以输入各种命令，如保存、退出等。常用命令如下：</p>
-<ul>
-<li><code>:w</code>：保存文件</li>
-<li><code>:q</code>：退出vim</li>
-<li><code>:wq</code>：保存并退出vim</li>
-<li><code>:q!</code>：强制退出vim，不保存文件</li>
-<li><code>:e filename</code>：打开文件</li>
-<li><code>:help</code>：查看帮助文档</li>
-</ul>
-<h4 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h4><p>在普通模式下，可以使用各种快捷键进行文本编辑。常用快捷键如下：</p>
-<ul>
-<li><code>h</code>：向左移动光标</li>
-<li><code>j</code>：向下移动光标</li>
-<li><code>k</code>：向上移动光标</li>
-<li><code>l</code>：向右移动光标</li>
-<li><code>0</code>：移动到行首</li>
-<li><code>$</code>：移动到行尾</li>
-<li><code>gg</code>：移动到文件开头</li>
-<li><code>G</code>：移动到文件结尾</li>
-<li><code>x</code>：删除光标所在字符</li>
-<li><code>dd</code>：删除光标所在行</li>
-<li><code>yy</code>：复制光标所在行</li>
-<li><code>P</code>(大写)：粘贴剪切板内容到光标上方</li>
-<li><code>p</code>(小写)：粘贴剪切板内容到光标下方</li>
-<li><code>u</code>：撤销上一次操作</li>
-<li><code>v</code>：进入可视模式，可以选择文本</li>
-<li><code>y</code>：复制选中的文本</li>
-<li><code>d</code>：删除选中的文本</li>
-<li><code>c</code>：剪切选中的文本</li>
-<li><code>r</code>：替换光标所在字符</li>
-<li><code>.</code>：重复上一个操作</li>
-<li><code>Ctrl + r</code>：重做上一个操作</li>
-<li>‘:w’:保存文件</li>
-<li>‘:q’:退出vim</li>
-<li>‘:wq’:保存并退出vim</li>
-<li>‘:q!’:强制退出vim，不保存文件</li>
-</ul>
-<h4 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h4><p>在插入模式下，可以输入文本。常用快捷键如下：</p>
-<ul>
-<li><code>i</code>：在光标前插入文本</li>
-<li><code>I</code>：在行首插入文本</li>
-<li><code>a</code>：在光标后插入文本</li>
-<li><code>A</code>：在行尾插入文本</li>
-<li><code>o</code>：在光标下方插入新行</li>
-<li><code>O</code>：在光标上方插入新行</li>
-<li><code>Esc</code>：返回普通模式</li>
-</ul>
-<h4 id="可视模式"><a href="#可视模式" class="headerlink" title="可视模式"></a>可视模式</h4><p>在可视模式下，可以选择文本。常用快捷键如下：</p>
-<ul>
-<li><code>v</code>：进入可视模式</li>
-<li><code>V</code>：进入行可视模式</li>
-<li><code>Ctrl + v</code>：进入块可视模式</li>
-<li><code>y</code>：复制选中的文本</li>
-<li><code>d</code>：删除选中的文本</li>
-<li><code>c</code>：剪切选中的文本</li>
-<li><code>p</code>：粘贴</li>
-<li><code>u</code>：撤销</li>
-</ul>
-<h3 id="vim按键说明"><a href="#vim按键说明" class="headerlink" title="vim按键说明"></a>vim按键说明</h3><h4 id="第一部分：一般模式的光标移动，复制粘贴、搜索替换等"><a href="#第一部分：一般模式的光标移动，复制粘贴、搜索替换等" class="headerlink" title="第一部分：一般模式的光标移动，复制粘贴、搜索替换等"></a>第一部分：一般模式的光标移动，复制粘贴、搜索替换等</h4><h4 id="移动光标的方法"><a href="#移动光标的方法" class="headerlink" title="移动光标的方法"></a>移动光标的方法</h4><table>
-<thead>
-<tr>
-<th>操作</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>ctrl + f</code></td>
-<td>屏幕向下移动一页</td>
-</tr>
-<tr>
-<td><code>ctrl + b</code></td>
-<td>屏幕向上移动一页</td>
-</tr>
-<tr>
-<td><code>ctrl + d</code></td>
-<td>屏幕向下移动半页</td>
-</tr>
-<tr>
-<td><code>ctrl + u</code></td>
-<td>屏幕向上移动半页</td>
-</tr>
-<tr>
-<td><code>n&lt;space&gt;</code></td>
-<td>按下数字后再按空格键，光标会向右移动这一行的n个字符。例如20<space>则光标会向后面移动20个字符距离</space></td>
-</tr>
-<tr>
-<td>‘0’</td>
-<td>光标移动到行首</td>
-</tr>
-<tr>
-<td>‘$’</td>
-<td>光标移动到行尾</td>
-</tr>
-<tr>
-<td>‘gg’</td>
-<td>光标移动到文件开头</td>
-</tr>
-<tr>
-<td>‘G’</td>
-<td>光标移动到文件结尾</td>
-</tr>
-<tr>
-<td><code>n&lt;Enter&gt;</code></td>
-<td>光标移动到当前行的第n个字符</td>
-</tr>
-<tr>
-<td>‘nG’</td>
-<td>光标移动到第n行</td>
-</tr>
-</tbody></table>
-<h4 id="搜索替换"><a href="#搜索替换" class="headerlink" title="搜索替换"></a>搜索替换</h4><table>
-<thead>
-<tr>
-<th>操作</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>‘&#x2F;word’</td>
-<td>向光标之下寻找一个名称为word的字符串。例如要在档案内搜寻vbird这个字符串，就输入&#x2F;vbird即可</td>
-</tr>
-<tr>
-<td>‘?word’</td>
-<td>向光标之上寻找一个名称为word的字符串</td>
-</tr>
-<tr>
-<td>‘n’</td>
-<td>搜寻下一个</td>
-</tr>
-<tr>
-<td>‘N’</td>
-<td>搜寻上一个</td>
-</tr>
-<tr>
-<td>‘:%s&#x2F;old&#x2F;new&#x2F;g’</td>
-<td>将档案内的old字串替换成new字串</td>
-</tr>
-</tbody></table>
-<h4 id="复制、剪切、粘贴"><a href="#复制、剪切、粘贴" class="headerlink" title="复制、剪切、粘贴"></a>复制、剪切、粘贴</h4><table>
-<thead>
-<tr>
-<th>操作</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>‘x’</td>
-<td>删除光标所在的字符</td>
-</tr>
-<tr>
-<td>‘X’</td>
-<td>删除光标前的字符</td>
-</tr>
-<tr>
-<td>‘dd’</td>
-<td>删除光标所在的行</td>
-</tr>
-<tr>
-<td>‘ndd’</td>
-<td>n为数字。剪切光标所在的向下n行,例如20dd则是剪切20行，用p&#x2F;P可以粘贴</td>
-</tr>
-<tr>
-<td>‘d1G’</td>
-<td>删除光标所在行到第一行的所有数据</td>
-</tr>
-<tr>
-<td>‘dG’</td>
-<td>删除光标所在行到最后一行的所有数据</td>
-</tr>
-<tr>
-<td>‘d0’</td>
-<td>那个是数字的0,删除游标所在处，到该行的最前面的一个字符</td>
-</tr>
-<tr>
-<td>‘yy’</td>
-<td>复制光标所在行</td>
-</tr>
-<tr>
-<td>‘nyy’</td>
-<td>n为数字。复制光标所在行向下n行,例如20yy则是复制20行，用p&#x2F;P可以粘贴</td>
-</tr>
-<tr>
-<td>‘y1G’</td>
-<td>复制光标所在行到第一行的所有数据</td>
-</tr>
-<tr>
-<td>‘yG’</td>
-<td>复制光标所在行到最后一行的所有数据</td>
-</tr>
-<tr>
-<td>‘y0’</td>
-<td>复制光标所在行到该行的最前面的一个字符</td>
-</tr>
-<tr>
-<td>‘y$’</td>
-<td>复制光标所在的那个字符到该行行尾的所有数据</td>
-</tr>
-<tr>
-<td>‘p’</td>
-<td>粘贴到光标后面</td>
-</tr>
-<tr>
-<td>‘P’</td>
-<td>粘贴到光标前面</td>
-</tr>
-<tr>
-<td>‘J’</td>
-<td>将光标所在行与下一行合并</td>
-</tr>
-<tr>
-<td>‘u’</td>
-<td>撤销上一个操作</td>
-</tr>
-<tr>
-<td>‘c’</td>
-<td>重复删除多个数据，例如向下删除10行, [10cj]</td>
-</tr>
-</tbody></table>
-<h4 id="个人快捷键的配置"><a href="#个人快捷键的配置" class="headerlink" title="个人快捷键的配置"></a>个人快捷键的配置</h4><p>我个人的主键是空格<code> </code></p>
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&lt;leader&gt;t</code></td>
-<td>打开终端</td>
-</tr>
-<tr>
-<td><code>&lt;leader&gt;n</code></td>
-<td>打开文件树</td>
-</tr>
-<tr>
-<td><code>&lt;leader&gt;f</code></td>
-<td>打开文件树并定位到当前文件</td>
-</tr>
-<tr>
-<td><code>&lt;C-h&gt;</code></td>
-<td>切换到左标签页</td>
-</tr>
-<tr>
-<td><code>&lt;C-l&gt;</code></td>
-<td>切换到右标签页</td>
-</tr>
-</tbody></table>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/04/04/vim-shortcut-key/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
