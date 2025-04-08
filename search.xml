@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Makefile_tutorial</title>
+    <url>/2025/04/08/Makefile-tutorial/</url>
+    <content><![CDATA[<h3 id="Makefile教程"><a href="#Makefile教程" class="headerlink" title="Makefile教程"></a>Makefile教程</h3><h4 id="Makefile简介"><a href="#Makefile简介" class="headerlink" title="Makefile简介"></a>Makefile简介</h4><p>Makefile是一个自动化构建工具，通常用于编译和链接程序。它通过定义规则和依赖关系来自动化构建过程，从而简化了软件开发中的重复性任务。<br>Makefile的基本结构包括目标、依赖和命令。目标是要生成的文件，依赖是生成目标所需的文件，命令是在生成目标时执行的操作。</p>
+<span id="more"></span>
+
+<h4 id="如何运行示例"><a href="#如何运行示例" class="headerlink" title="如何运行示例"></a>如何运行示例</h4><p>首先安装make终端。对于Linux和MacOS，通常已经预装了make。对于Windows用户，可以使用WSL（Windows Subsystem for Linux）或安装GNU Make。<br>在终端中，进入到包含Makefile的目录，然后运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+<p>这将根据Makefile中的规则自动执行构建过程。<br>如果要运行特定的目标，可以在命令后指定目标名称，例如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make clean</span><br></pre></td></tr></table></figure>
+<p>这将执行Makefile中定义的<code>clean</code>目标，通常用于清理生成的文件。</p>
+<h4 id="Makefile示例"><a href="#Makefile示例" class="headerlink" title="Makefile示例"></a>Makefile示例</h4><figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Makefile示例</span></span><br><span class="line">CC = gcc</span><br><span class="line">CFLAGS = -Wall -g</span><br><span class="line">LDFLAGS = -lm</span><br><span class="line">SOURCES = main.c utils.c</span><br><span class="line">OBJECTS = $(SOURCES:.c=.o)</span><br><span class="line">TARGET = my_program</span><br><span class="line"><span class="comment"># 默认目标</span></span><br><span class="line"><span class="section">all: <span class="variable">$(TARGET)</span></span></span><br><span class="line"><span class="comment"># 目标规则</span></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJECTS)</span></span><br><span class="line">    <span class="variable">$(CC)</span> <span class="variable">$(LDFLAGS)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="comment"># 依赖规则</span></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">    <span class="variable">$(CC)</span> <span class="variable">$(CFLAGS)</span> -c <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="comment"># 清理目标</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f <span class="variable">$(OBJECTS)</span> <span class="variable">$(TARGET)</span></span><br></pre></td></tr></table></figure>
+<h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><ul>
+<li><code>CC</code>：指定编译器，这里使用gcc。</li>
+<li><code>CFLAGS</code>：编译选项，这里启用所有警告并生成调试信息。</li>
+<li><code>LDFLAGS</code>：链接选项，这里链接数学库。</li>
+<li><code>SOURCES</code>：源文件列表。</li>
+<li><code>OBJECTS</code>：目标文件列表，通过将源文件扩展名从.c更改为.o来生成。</li>
+<li><code>TARGET</code>：最终生成的可执行文件名称。</li>
+<li><code>all</code>：默认目标，当运行<code>make</code>时执行。</li>
+<li><code>$(TARGET)</code>：依赖于所有目标文件，使用<code>$@</code>表示目标名称，<code>$^</code>表示所有依赖文件。</li>
+<li><code>%.o: %.c</code>：模式规则，表示如何从源文件生成目标文件。</li>
+<li><code>clean</code>：清理目标，删除所有生成的文件。</li>
+</ul>
+<h1 id="根据上面的Makefile，举一个实际的例子"><a href="#根据上面的Makefile，举一个实际的例子" class="headerlink" title="根据上面的Makefile，举一个实际的例子"></a>根据上面的Makefile，举一个实际的例子</h1><p>假设我们有两个C源文件<code>main.c</code>和<code>utils.c</code>，以及一个头文件<code>utils.h</code>。我们希望编译这些文件并生成一个名为<code>my_program</code>的可执行文件。<br><code>main.c</code>:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;utils.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello, World!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>utils.c</code>:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;utils.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">print_message</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;This is a message from utils.c\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>utils.h</code>:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> UTILS_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> UTILS_H</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">print_message</span><span class="params">()</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<p>在终端中，进入到包含这些文件的目录，然后运行<code>make</code>命令。Makefile将自动编译<code>main.c</code>和<code>utils.c</code>，并生成一个名为<code>my_program</code>的可执行文件。<br>运行<code>./my_program</code>将输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hello, World!</span><br><span class="line">This is a message from utils.c</span><br></pre></td></tr></table></figure>
+
+<h4 id="新手示例"><a href="#新手示例" class="headerlink" title="新手示例"></a>新手示例</h4><p>下面的Makefile有3个分离的规则（rules）。当在终端运行<code>make blah</code>时，它会通过一系列的步骤构建一个名为<code>blah</code>的的程序:</p>
+<ul>
+<li><code>blan</code>给<code>make</code>提供了构建目标(target)的名称, 所以它会在makefile中优先被<code>make</code>程序搜索</li>
+<li>构建系统发现<code>blan</code>依赖<code>blah.o</code>,所以<code>make</code>开始搜索<code>blah.o</code>这个目标</li>
+<li><code>blah.o</code>没有依赖,直接运行<code>echo</code>命令</li>
+<li>接着运行<code>cc -c</code>命令，以为<code>blah.o</code>的依赖的所有<code>commands</code>都执行完了</li>
+<li>同理,接着运行顶部的<code>cc</code>命令</li>
+<li>就这样,一个编译好的C程序<code>blah</code>就诞生了</li>
+</ul>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">blah: blah.o</span></span><br><span class="line">    cc -o blah blah.o <span class="comment"># Runs third</span></span><br><span class="line"></span><br><span class="line"><span class="section">blah.o: blah.c</span></span><br><span class="line">    cc -c blah.c -o blah.o <span class="comment"># Runs second</span></span><br><span class="line"></span><br><span class="line"><span class="section">blah.c:</span></span><br><span class="line">    echo <span class="string">&quot;int main() &#123; return 0; &#125;&quot;</span> &gt; blah.c <span class="comment"># Runs first</span></span><br></pre></td></tr></table></figure>
+
+<p>注：<code>-c</code> 选项告诉编译器只编译源文件，而不进行链接。<code>-o file</code> 将其前面命令的输出内容放在文件file中</p>
+<h4 id="Makefile的变量"><a href="#Makefile的变量" class="headerlink" title="Makefile的变量"></a>Makefile的变量</h4><p>Makefile中的变量可以用来简化和组织构建过程。变量可以在Makefile中定义，并在规则和命令中使用。下面是一个简单的示例：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">CC = gcc</span><br><span class="line">CFLAGS = -Wall -g</span><br><span class="line">LDFLAGS = -lm</span><br><span class="line">SOURCES = main.c utils.c</span><br><span class="line">OBJECTS = $(SOURCES:.c=.o)</span><br><span class="line">TARGET = my_program</span><br><span class="line"><span class="comment"># 默认目标</span></span><br><span class="line"><span class="section">all: <span class="variable">$(TARGET)</span></span></span><br><span class="line"><span class="comment"># 目标规则</span></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJECTS)</span></span><br><span class="line">    <span class="variable">$(CC)</span> <span class="variable">$(LDFLAGS)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="comment"># 依赖规则</span></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">    <span class="variable">$(CC)</span> <span class="variable">$(CFLAGS)</span> -c <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="comment"># 清理目标</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f <span class="variable">$(OBJECTS)</span> <span class="variable">$(TARGET)</span></span><br></pre></td></tr></table></figure>
+<p>在这个示例中，我们定义了一些变量，如<code>CC</code>、<code>CFLAGS</code>、<code>LDFLAGS</code>等。然后在规则和命令中使用这些变量，使得Makefile更加灵活和易于维护。<br>引用变量的语法是<code>$(VARIABLE_NAME)</code>，其中<code>VARIABLE_NAME</code>是变量的名称。我们可以在Makefile中使用变量来简化命令和规则的编写。</p>
+<h4 id="make是如何工作的"><a href="#make是如何工作的" class="headerlink" title="make是如何工作的"></a>make是如何工作的</h4><p>在默认的方式下，输入<code>make</code>命令。</p>
+<ul>
+<li>make会在当前目录下查找Makefile文件</li>
+<li>如果找到，它会找文件中的第一个目标文件(target)。并把这个文件作为最终的目标文件</li>
+<li>如果目标文件不存在，或者目标所依赖的后面的<code>.o</code>文件的文件修改时间要比目标文件这个文件新，那么，它会执行后面所定义的命令来生成目标文件</li>
+<li>如果目标文件所依赖的<code>.o</code>文件也不存在，那么make会在当前文件中找目标为<code>.o</code>文件的依赖性，如果找到则再根据那一个规则生成<code>.o</code>文件,然后再用<code>.o</code>文件生成make的最终任务，而就是可执行文件了。</li>
+</ul>
+<p>这就是整个make的依赖性，make会一层又一层地去找文件的依赖关系，直到最终编译出第一个目标文件。在找寻的过程中，如果出现错误，比如最后被依赖的文件找不到，那么make就会直接退出，并报错，而对于所定义的命令的错误，或是编译不成功，make根本不理。make只管文件的依赖性，即，如果在我找了依赖关系之后，冒号后面的文件还是不在，那么对不起，我就不工作啦。</p>
+<p>通过上述分析，我们知道，像clean这种，没有被第一个目标文件直接或间接关联，那么它后面所定义的命令将不会被自动执行，不过，我们可以显示要make执行。即命令—— make clean ，以此来清除所有的目标文件，以便重编译。</p>
+<p>于是在我们编程中，如果这个工程已被编译过了，当我们修改了其中一个源文件，比如 file.c ，那么根据我们的依赖性，我们的目标 file.o 会被重编译（也就是在这个依性关系后面所定义的命令），于是 file.o 的文件也是最新的啦，于是 file.o 的文件修改时间要比 edit 要新，所以 edit 也会被重新链接了（详见 edit 目标文件后定义的命令）。</p>
+<p>而如果我们改变了 command.h ，那么， kdb.o 、 command.o 和 files.o 都会被重编译，并且， edit 会被重链接。</p>
+]]></content>
+      <categories>
+        <category>编程语言</category>
+        <category>C语言</category>
+        <category>自动化构建</category>
+        <category>Makefile</category>
+      </categories>
+      <tags>
+        <tag>Makefile</tag>
+        <tag>C</tag>
+        <tag>编程</tag>
+        <tag>自动化构建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vim快捷键</title>
     <url>/2025/04/04/vim-shortcut-keys/</url>
     <content><![CDATA[<h2 id="vim键盘图"><a href="#vim键盘图" class="headerlink" title="vim键盘图"></a>vim键盘图</h2><p><img src="/images/image.jpg" alt="vim键盘图"></p>
