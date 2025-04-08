@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Makefile_tutorial</title>
+    <title>Makefile教程</title>
     <url>/2025/04/08/Makefile-tutorial/</url>
     <content><![CDATA[<h3 id="Makefile教程"><a href="#Makefile教程" class="headerlink" title="Makefile教程"></a>Makefile教程</h3><h4 id="Makefile简介"><a href="#Makefile简介" class="headerlink" title="Makefile简介"></a>Makefile简介</h4><p>Makefile是一个自动化构建工具，通常用于编译和链接程序。它通过定义规则和依赖关系来自动化构建过程，从而简化了软件开发中的重复性任务。<br>Makefile的基本结构包括目标、依赖和命令。目标是要生成的文件，依赖是生成目标所需的文件，命令是在生成目标时执行的操作。</p>
 <span id="more"></span>
@@ -340,7 +340,7 @@
       </tags>
   </entry>
   <entry>
-    <title>vscode-shortcut-keys</title>
+    <title>vscode快捷键</title>
     <url>/2025/04/08/vscode-shortcut-keys/</url>
     <content><![CDATA[<h2 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h2><span id="more"></span>
 <h3 id="工作区快捷键"><a href="#工作区快捷键" class="headerlink" title="工作区快捷键"></a>工作区快捷键</h3><table>
