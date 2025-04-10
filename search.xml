@@ -547,7 +547,7 @@
       </tags>
   </entry>
   <entry>
-    <title>为什么悬垂指针在rust里是不安全的.md</title>
+    <title>为什么悬垂指针在rust里是不安全的</title>
     <url>/2025/04/10/why-dangling-references-are-unsafe-in-rust-md/</url>
     <content><![CDATA[<p>在 Rust 中，<strong>悬垂引用（Dangling Reference）</strong> 是一种严重的内存安全问题，因为它会导致程序访问已释放或无效的内存，从而引发未定义行为（Undefined Behavior, UB）。Rust 的所有权系统和借用检查器（Borrow Checker）的核心目标之一就是<strong>在编译时彻底杜绝悬垂引用</strong>。以下是详细解释：</p>
 <hr>
