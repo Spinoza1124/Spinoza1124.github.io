@@ -3,7 +3,7 @@
   <entry>
     <title>Makefile教程</title>
     <url>/2025/04/08/Makefile-tutorial/</url>
-    <content><![CDATA[<h3 id="Makefile教程"><a href="#Makefile教程" class="headerlink" title="Makefile教程"></a>Makefile教程</h3><h4 id="Makefile简介"><a href="#Makefile简介" class="headerlink" title="Makefile简介"></a>Makefile简介</h4><p>Makefile是一个自动化构建工具，通常用于编译和链接程序。它通过定义规则和依赖关系来自动化构建过程，从而简化了软件开发中的重复性任务。<br>Makefile的基本结构包括目标、依赖和命令。目标是要生成的文件，依赖是生成目标所需的文件，命令是在生成目标时执行的操作。</p>
+    <content><![CDATA[<p>Makefile是一个自动化构建工具，通常用于编译和链接程序。它通过定义规则和依赖关系来自动化构建过程，从而简化了软件开发中的重复性任务。<br>Makefile的基本结构包括目标、依赖和命令。目标是要生成的文件，依赖是生成目标所需的文件，命令是在生成目标时执行的操作。</p>
 <span id="more"></span>
 
 <h4 id="如何运行示例"><a href="#如何运行示例" class="headerlink" title="如何运行示例"></a>如何运行示例</h4><p>首先安装make终端。对于Linux和MacOS，通常已经预装了make。对于Windows用户，可以使用WSL（Windows Subsystem for Linux）或安装GNU Make。<br>在终端中，进入到包含Makefile的目录，然后运行以下命令：</p>
@@ -71,7 +71,7 @@
   <entry>
     <title>cpp笔记</title>
     <url>/2025/04/08/cpp-notebook/</url>
-    <content><![CDATA[<h3 id="C-笔记"><a href="#C-笔记" class="headerlink" title="C++笔记"></a>C++笔记</h3><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><ul>
+    <content><![CDATA[<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
 <li>单行注释：<code>//</code></li>
 <li>多行注释：<code>/* 注释内容 */</code></li>
 <li>文档注释：<code>/// 注释内容</code> 或 <code>/** 注释内容 */</code></li>
@@ -84,7 +84,7 @@
 <li>文档注释可以用于函数、类、变量等的描述，方便生成API文档。</li>
 </ul>
 <span id="more"></span>
-<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
 <li>变量声明：<code>int a;</code></li>
 <li>变量初始化：<code>int a = 10;</code></li>
 <li>变量赋值：<code>a = 20;</code></li>
@@ -101,7 +101,7 @@
 <li>常量的使用场景：常量通常用于定义一些固定的值，例如数学常数、配置参数等。</li>
 <li>常量的命名规范：常量的命名通常使用大写字母和下划线分隔，例如<code>MAX_VALUE</code>，以便于区分变量和常量。</li>
 </ul>
-<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ul>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
 <li>基本数据类型：<code>int</code>、<code>float</code>、<code>double</code>、<code>char</code>、<code>bool</code></li>
 <li>复合数据类型：<code>struct</code>、<code>union</code>、<code>enum</code></li>
 <li>指针类型：<code>int*</code>、<code>float*</code>、<code>char*</code></li>
@@ -118,7 +118,7 @@
 <li>基本数据类型的使用：<code>std::cout &lt;&lt; a;</code>、<code>std::cin &gt;&gt; b;</code>、<code>std::cout &lt;&lt; c;</code>、<code>std::cin &gt;&gt; d;</code>、<code>std::cout &lt;&lt; e;</code></li>
 <li>基本数据类型的转换：<code>int</code>转<code>float</code>：<code>float f = (float)a;</code>、<code>float</code>转<code>int</code>：&#96;int g &#x3D; (int)b;其他类型转换类似。</li>
 </ul>
-<h4 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h4><h1 id="举个例子说明"><a href="#举个例子说明" class="headerlink" title="举个例子说明"></a>举个例子说明</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> globalVar = <span class="number">10</span>; <span class="comment">// 全局变量</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> localVar = <span class="number">20</span>; <span class="comment">// 局部变量</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Local variable: &quot;</span> &lt;&lt; localVar &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Global variable: &quot;</span> &lt;&lt; globalVar &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">function</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Global variable: &quot;</span> &lt;&lt; globalVar &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// cout &lt;&lt; &quot;Local variable: &quot; &lt;&lt; localVar &lt;&lt; endl; // 错误，localVar在这里不可见</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><h1 id="举个例子说明"><a href="#举个例子说明" class="headerlink" title="举个例子说明"></a>举个例子说明</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> globalVar = <span class="number">10</span>; <span class="comment">// 全局变量</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> localVar = <span class="number">20</span>; <span class="comment">// 局部变量</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Local variable: &quot;</span> &lt;&lt; localVar &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Global variable: &quot;</span> &lt;&lt; globalVar &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">function</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Global variable: &quot;</span> &lt;&lt; globalVar &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// cout &lt;&lt; &quot;Local variable: &quot; &lt;&lt; localVar &lt;&lt; endl; // 错误，localVar在这里不可见</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 <ul>
@@ -449,7 +449,7 @@
   <entry>
     <title>vscode快捷键</title>
     <url>/2025/04/08/vscode-shortcut-keys/</url>
-    <content><![CDATA[<h2 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h2><span id="more"></span>
+    <content><![CDATA[<span id="more"></span>
 <h3 id="工作区快捷键"><a href="#工作区快捷键" class="headerlink" title="工作区快捷键"></a>工作区快捷键</h3><table>
 <thead>
 <tr>
