@@ -172,6 +172,7 @@
 <p><strong>一段不安全的代码</strong></p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="title function_">foo</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    a = <span class="number">100</span>;</span><br><span class="line">    <span class="type">char</span> *c = <span class="string">&quot;xyz&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上面的代码中，a是局部变量，当函数结束后将局部变量a的地址返回，a存在栈中，在离开作用域后，a所申请的栈上内存会被系统回收，从而造成了悬空指针的错误。这是一个非常典型的内存安全的问题。虽然编译可以通过，但是运行的时候会出现错误。<br>再来看变量c，c的值是常量字符串，存储于常量区，我们可能只用一次，但必须”xyz”只有当整个程序结束后才会回收这片内存。</p>
+<span id="more"></span>
 <h2 id="栈和堆"><a href="#栈和堆" class="headerlink" title="栈和堆"></a>栈和堆</h2><p>对于大小为止或可能变换的数据，我们需要存储在堆上。当向堆上放入数据时，需要请求一定大小的内存空间。操作系统在堆的某处找到一块足够大的空位，把它标记为已使用，并返回一个表示该位置地址的指针，该过程被称为在堆上分配内存，有时简称为 “分配”(allocating)。</p>
 <p>接着，该指针会被推入栈中，因为指针的大小是已知且固定的，在后续使用过程中，你将通过栈中的指针，来获取数据在堆上的实际内存位置，进而访问该数据。</p>
 <p><strong>所有权原则</strong></p>
