@@ -61,15 +61,10 @@
 <p>而如果我们改变了 command.h ，那么， kdb.o 、 command.o 和 files.o 都会被重编译，并且， edit 会被重链接。</p>
 ]]></content>
       <categories>
-        <category>编程语言</category>
-        <category>C语言</category>
-        <category>自动化构建</category>
         <category>Makefile</category>
       </categories>
       <tags>
         <tag>Makefile</tag>
-        <tag>C</tag>
-        <tag>编程</tag>
         <tag>自动化构建</tag>
       </tags>
   </entry>
@@ -151,10 +146,8 @@
 ]]></content>
       <categories>
         <category>C++</category>
-        <category>编程语言</category>
       </categories>
       <tags>
-        <tag>编程</tag>
         <tag>C++</tag>
       </tags>
   </entry>
@@ -182,13 +175,9 @@
 ]]></content>
       <categories>
         <category>Rust</category>
-        <category>编程语言</category>
-        <category>学习</category>
       </categories>
       <tags>
-        <tag>编程</tag>
         <tag>Rust</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -606,16 +595,12 @@
 ]]></content>
       <categories>
         <category>Rust</category>
-        <category>内存安全</category>
-        <category>生命周期</category>
-        <category>所有权</category>
       </categories>
       <tags>
         <tag>Rust</tag>
         <tag>内存安全</tag>
         <tag>悬垂引用</tag>
         <tag>生命周期</tag>
-        <tag>所有权</tag>
       </tags>
   </entry>
 </search>
