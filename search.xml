@@ -161,7 +161,7 @@
       </tags>
   </entry>
   <entry>
-    <title>ownership_and_borrowing</title>
+    <title>所有权和借用</title>
     <url>/2025/04/10/ownership-and-borrowing/</url>
     <content><![CDATA[<h1 id="Rust的所有权和借用"><a href="#Rust的所有权和借用" class="headerlink" title="Rust的所有权和借用"></a>Rust的所有权和借用</h1><p>内存回收是编程语言设计的重点之一，如今的计算机语言中，关于内存回收的机制出现三种流派：</p>
 <ul>
@@ -556,6 +556,67 @@
       </categories>
       <tags>
         <tag>快捷键说明</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么悬垂指针在rust里是不安全的.md</title>
+    <url>/2025/04/10/why-dangling-references-are-unsafe-in-rust-md/</url>
+    <content><![CDATA[<p>在 Rust 中，<strong>悬垂引用（Dangling Reference）</strong> 是一种严重的内存安全问题，因为它会导致程序访问已释放或无效的内存，从而引发未定义行为（Undefined Behavior, UB）。Rust 的所有权系统和借用检查器（Borrow Checker）的核心目标之一就是<strong>在编译时彻底杜绝悬垂引用</strong>。以下是详细解释：</p>
+<hr>
+<h3 id="1-什么是悬垂引用？"><a href="#1-什么是悬垂引用？" class="headerlink" title="1. 什么是悬垂引用？"></a>1. <strong>什么是悬垂引用？</strong></h3><p>悬垂引用是指一个指针或引用指向的内存地址<strong>已被释放或不再有效</strong>，但程序仍尝试通过该引用访问数据。例如：</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">dangling_reference</span>() <span class="punctuation">-&gt;</span> &amp;<span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>); <span class="comment">// `s` 在函数结束时被销毁</span></span><br><span class="line">    &amp;s <span class="comment">// 返回一个指向已释放内存的引用（编译错误！）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Rust 编译器会直接拒绝此类代码，因为 <code>s</code> 的生命周期仅限于函数内部，而返回的引用会超出其生命周期。</p>
+<span id="more"></span>
+<hr>
+<h3 id="2-为什么悬垂引用危险？"><a href="#2-为什么悬垂引用危险？" class="headerlink" title="2. 为什么悬垂引用危险？"></a>2. <strong>为什么悬垂引用危险？</strong></h3><ul>
+<li><strong>未定义行为（UB）</strong>：访问已释放的内存可能导致程序崩溃、数据损坏或安全漏洞（如攻击者利用悬垂指针注入恶意代码）。</li>
+<li><strong>难以调试</strong>：悬垂引用的问题可能在运行时随机出现，且难以复现（取决于内存分配器的行为）。</li>
+</ul>
+<hr>
+<h3 id="3-Rust-如何防止悬垂引用？"><a href="#3-Rust-如何防止悬垂引用？" class="headerlink" title="3. Rust 如何防止悬垂引用？"></a>3. <strong>Rust 如何防止悬垂引用？</strong></h3><p>Rust 通过以下机制在编译时静态检查所有引用的有效性：</p>
+<h4 id="（1）生命周期标注（Lifetimes）"><a href="#（1）生命周期标注（Lifetimes）" class="headerlink" title="（1）生命周期标注（Lifetimes）"></a>（1）<strong>生命周期标注（Lifetimes）</strong></h4><ul>
+<li>显式或隐式标注引用的生命周期，确保引用不会比其引用的数据存活更久。</li>
+<li>示例：<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">longest</span>&lt;<span class="symbol">&#x27;a</span>&gt;(x: &amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>, y: &amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>) <span class="punctuation">-&gt;</span> &amp;<span class="symbol">&#x27;a</span> <span class="type">str</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x.<span class="title function_ invoke__">len</span>() &gt; y.<span class="title function_ invoke__">len</span>() &#123; x &#125; <span class="keyword">else</span> &#123; y &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+编译器会确保返回的引用 <code>&amp;&#39;a str</code> 不会超过输入参数的生命周期。</li>
+</ul>
+<h4 id="（2）所有权规则"><a href="#（2）所有权规则" class="headerlink" title="（2）所有权规则"></a>（2）<strong>所有权规则</strong></h4><ul>
+<li>数据的所有者（Owner）负责释放内存，引用（Borrow）必须遵守所有权的生命周期。</li>
+<li>任何试图返回悬垂引用的代码都会被编译器拒绝：<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">invalid</span>() <span class="punctuation">-&gt;</span> &amp;<span class="type">i32</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = <span class="number">42</span>;</span><br><span class="line">    &amp;x <span class="comment">// 错误！`x` 的生命周期不足</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="（3）借用检查器（Borrow-Checker）"><a href="#（3）借用检查器（Borrow-Checker）" class="headerlink" title="（3）借用检查器（Borrow Checker）"></a>（3）<strong>借用检查器（Borrow Checker）</strong></h4><ul>
+<li>在编译时分析所有引用的作用域，确保：<ul>
+<li>引用不会比其引用的数据存活更久。</li>
+<li>不存在数据竞争（通过 <code>可变引用独占性</code> 规则）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-对比其他语言"><a href="#4-对比其他语言" class="headerlink" title="4. 对比其他语言"></a>4. <strong>对比其他语言</strong></h3><ul>
+<li><strong>C&#x2F;C++</strong>：允许悬垂指针，需程序员手动保证安全（极易出错）。</li>
+<li><strong>Java&#x2F;Python</strong>：通过垃圾回收（GC）避免悬垂引用，但牺牲性能和实时性。</li>
+<li><strong>Rust</strong>：<strong>零成本抽象</strong>，无需运行时 GC，完全在编译期解决问题。</li>
+</ul>
+<hr>
+<h3 id="5-如何避免悬垂引用？"><a href="#5-如何避免悬垂引用？" class="headerlink" title="5. 如何避免悬垂引用？"></a>5. <strong>如何避免悬垂引用？</strong></h3><ul>
+<li><strong>遵循所有权规则</strong>：确保引用的作用域不超过被引用数据。</li>
+<li><strong>使用生命周期参数</strong>：在函数或结构体中显式标注生命周期。</li>
+<li><strong>必要时转移所有权</strong>：返回数据本身而非引用（如返回 <code>String</code> 而非 <code>&amp;String</code>）。</li>
+</ul>
+<hr>
+<h3 id="示例：安全的替代方案"><a href="#示例：安全的替代方案" class="headerlink" title="示例：安全的替代方案"></a>示例：安全的替代方案</h3><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">no_dangle</span>() <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123; <span class="comment">// 返回所有权而非引用</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">    s <span class="comment">// 转移所有权到调用者</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Rust</category>
+        <category>内存安全</category>
+        <category>生命周期</category>
+        <category>所有权</category>
+      </categories>
+      <tags>
+        <tag>Rust</tag>
+        <tag>内存安全</tag>
+        <tag>悬垂引用</tag>
+        <tag>生命周期</tag>
+        <tag>所有权</tag>
       </tags>
   </entry>
 </search>
