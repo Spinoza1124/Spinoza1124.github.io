@@ -69,6 +69,108 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown语法</title>
+    <url>/2025/04/15/Markdown%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>Markdown 是一种轻量级的标记语言，广泛用于编写文档、博客和技术文章。掌握 Markdown 语法可以帮助你快速创建格式化的文本。可以显著提高文档的可读性和可维护性。</p>
+<span id="more"></span>
+
+<p>编写规范的 Markdown 文档可以让内容清晰易读，且兼容性良好。以下是编写高质量 Markdown 的实用指南：</p>
+<hr>
+<h3 id="1-基础语法规范"><a href="#1-基础语法规范" class="headerlink" title="1. 基础语法规范"></a><strong>1. 基础语法规范</strong></h3><h4 id="（1）标题层级"><a href="#（1）标题层级" class="headerlink" title="（1）标题层级"></a><strong>（1）标题层级</strong></h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题（建议文档仅用1个）</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>前后空行</strong>：标题上下留空行，避免粘连</li>
+<li><strong>避免跳级</strong>：如从 <code>##</code> 直接到 <code>####</code></li>
+</ul>
+<h4 id="（2）段落与换行"><a href="#（2）段落与换行" class="headerlink" title="（2）段落与换行"></a><strong>（2）段落与换行</strong></h4><ul>
+<li><strong>段落间隔</strong>：段落间用空行分隔</li>
+<li><strong>强制换行</strong>：行尾添加两个空格（多数渲染器支持直接换行）</li>
+</ul>
+<h4 id="（3）列表"><a href="#（3）列表" class="headerlink" title="（3）列表"></a><strong>（3）列表</strong></h4><p><strong>有序列表</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">2.</span> 第二项</span><br><span class="line"><span class="bullet">   -</span> 子项（缩进2或4空格）</span><br></pre></td></tr></table></figure>
+
+<p><strong>无序列表</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 项目符号</span><br><span class="line"><span class="bullet">  *</span> 嵌套符号（保持缩进一致）</span><br><span class="line"><span class="bullet">  +</span> 可混合符号（但建议统一风格）</span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）代码块"><a href="#（4）代码块" class="headerlink" title="（4）代码块"></a><strong>（4）代码块</strong></h4><ul>
+<li><strong>行内代码</strong>：用反引号包裹 <code>`code`</code></li>
+<li><strong>多行代码</strong>：<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```语言类型（如js/python）</span></span><br><span class="line"><span class="code">function hello() &#123;</span></span><br><span class="line"><span class="code">  console.log(&quot;Hello Markdown&quot;);</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="（5）链接与图片"><a href="#（5）链接与图片" class="headerlink" title="（5）链接与图片"></a><strong>（5）链接与图片</strong></h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">链接文字</span>](<span class="link">URL &quot;可选标题&quot;</span>)  </span><br><span class="line">![<span class="string">图片描述</span>](<span class="link">图片路径/URL</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>建议相对路径</strong>：若文档用于版本控制（如GitHub），优先使用相对路径引用图片</li>
+</ul>
+<hr>
+<h3 id="2-增强可读性技巧"><a href="#2-增强可读性技巧" class="headerlink" title="2. 增强可读性技巧"></a><strong>2. 增强可读性技巧</strong></h3><h4 id="（1）表格对齐"><a href="#（1）表格对齐" class="headerlink" title="（1）表格对齐"></a><strong>（1）表格对齐</strong></h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 居中对齐 | 右对齐 |</span><br><span class="line">|:-------|:--------:|-------:|</span><br><span class="line">| 数据1  |   数据2  |   数据3|</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>使用工具生成</strong>：推荐 <a href="https://www.tablesgenerator.com/markdown_tables">Tables Generator</a></li>
+</ul>
+<h4 id="（2）任务列表"><a href="#（2）任务列表" class="headerlink" title="（2）任务列表"></a><strong>（2）任务列表</strong></h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] 已完成任务</span><br><span class="line"><span class="bullet">-</span> [ ] 未完成任务</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）注释与折叠"><a href="#（3）注释与折叠" class="headerlink" title="（3）注释与折叠"></a><strong>（3）注释与折叠</strong></h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&lt;!-- 这是隐藏的注释 --&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">summary</span>&gt;</span></span>点击展开详情<span class="language-xml"><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">被折叠的内容（支持Markdown语法）</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="3-高级扩展语法（需渲染器支持）"><a href="#3-高级扩展语法（需渲染器支持）" class="headerlink" title="3. 高级扩展语法（需渲染器支持）"></a><strong>3. 高级扩展语法（需渲染器支持）</strong></h3><h4 id="（1）流程图与图表"><a href="#（1）流程图与图表" class="headerlink" title="（1）流程图与图表"></a><strong>（1）流程图与图表</strong></h4><p>使用 Mermaid（GitHub&#x2F;GitLab 已原生支持）：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```mermaid</span></span><br><span class="line"><span class="code">graph TD</span></span><br><span class="line"><span class="code">  A[开始] --&gt; B&#123;条件判断&#125;</span></span><br><span class="line"><span class="code">  B --&gt;|是| C[执行操作]</span></span><br><span class="line"><span class="code">  B --&gt;|否| D[结束]</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）数学公式"><a href="#（2）数学公式" class="headerlink" title="（2）数学公式"></a><strong>（2）数学公式</strong></h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">行内公式：$E = mc^2$</span><br><span class="line"></span><br><span class="line">块级公式：</span><br><span class="line">$$</span><br><span class="line">\sum<span class="emphasis">_&#123;i=1&#125;^n i = \frac&#123;n(n+1)&#125;&#123;2&#125;</span></span><br><span class="line"><span class="emphasis">$$</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="4-最佳实践"><a href="#4-最佳实践" class="headerlink" title="4. 最佳实践"></a><strong>4. 最佳实践</strong></h3><h4 id="（1）保持一致性"><a href="#（1）保持一致性" class="headerlink" title="（1）保持一致性"></a><strong>（1）保持一致性</strong></h4><ul>
+<li><strong>符号统一</strong>：如列表用 <code>-</code> 或 <code>*</code> 保持全文一致</li>
+<li><strong>缩进对齐</strong>：嵌套内容统一缩进（推荐2或4空格）</li>
+</ul>
+<h4 id="（2）语义化写作"><a href="#（2）语义化写作" class="headerlink" title="（2）语义化写作"></a><strong>（2）语义化写作</strong></h4><ul>
+<li><strong>避免过度装饰</strong>：少用无意义的加粗&#x2F;斜体</li>
+<li><strong>使用引用块</strong>：<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 引用他人观点或重要说明</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="（3）兼容性处理"><a href="#（3）兼容性处理" class="headerlink" title="（3）兼容性处理"></a><strong>（3）兼容性处理</strong></h4><ul>
+<li><strong>转义特殊字符</strong>：如 <code>#</code>、<code>*</code> 前加反斜杠 <code>\#</code></li>
+<li><strong>测试渲染效果</strong>：在目标平台（如GitHub、VS Code）预览</li>
+</ul>
+<hr>
+<h3 id="5-工具推荐"><a href="#5-工具推荐" class="headerlink" title="5. 工具推荐"></a><strong>5. 工具推荐</strong></h3><ul>
+<li><strong>编辑器</strong>：<ul>
+<li><a href="https://typora.io/">Typora</a>（即时渲染）</li>
+<li><a href="https://code.visualstudio.com/">VS Code</a> + Markdown插件</li>
+</ul>
+</li>
+<li><strong>校验工具</strong>：<ul>
+<li><a href="https://github.com/DavidAnson/markdownlint">markdownlint</a>（自动检查规范）</li>
+</ul>
+</li>
+<li><strong>图床工具</strong>：<ul>
+<li><a href="https://github.com/Molunerfinn/PicGo">PicGo</a>（快速上传图片）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="6-示例模板"><a href="#6-示例模板" class="headerlink" title="6. 示例模板"></a><strong>6. 示例模板</strong></h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 项目名称</span></span><br><span class="line"></span><br><span class="line">![<span class="string">项目Logo</span>](<span class="link">logo.png</span>)</span><br><span class="line"></span><br><span class="line"><span class="section">## 功能特性</span></span><br><span class="line"><span class="bullet">-</span> ✅ 支持核心功能A</span><br><span class="line"><span class="bullet">-</span> 🚧 开发中功能B</span><br><span class="line"></span><br><span class="line"><span class="section">## 快速开始</span></span><br><span class="line"><span class="section">### 安装步骤</span></span><br><span class="line"><span class="code">```bash</span></span><br><span class="line"><span class="code">npm install my-project</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; demo &#125; <span class="keyword">from</span> <span class="string">&#x27;my-project&#x27;</span>;</span><br><span class="line"><span class="title function_">demo</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="贡献指南"><a href="#贡献指南" class="headerlink" title="贡献指南"></a>贡献指南</h2><p>请阅读 <a href="docs/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p><a href="LICENSE">MIT License</a></p>
+<pre><code>
+---
+
+### **7. 常见错误避免**
+- ❌ 标题层级混乱（如从 `#` 直接跳到 `###`）
+- ❌ 长段落未分段（超过5行建议拆分）
+- ❌ 图片路径失效（建议版本控制中存放到 `/docs/images/`）
+- ❌ 使用HTML标签（除非必要，优先用原生Markdown语法）
+
+---
+</code></pre>
+]]></content>
+      <categories>
+        <category>Markdown</category>
+        <category>编程规范</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>cpp笔记</title>
     <url>/2025/04/08/cpp%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
@@ -578,6 +680,8 @@
     <title>如何书写规范的Git Commit</title>
     <url>/2025/04/15/%E5%A6%82%E4%BD%95%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83%E7%9A%84Git-Commit/</url>
     <content><![CDATA[<p>编写规范的 Git Commit 信息是团队协作和项目管理的重要实践，它能让代码历史清晰可读，方便回溯问题、生成变更日志，甚至自动化版本管理。但令绝大多数人头疼的是，Git Commit 信息的规范并没有一个统一的标准。不同的团队、项目和个人都有自己的习惯和风格。<br>在这里，我将介绍一些常见的 Git Commit 信息规范和最佳实践，帮助你编写出更清晰、更易读的 Commit 信息。</p>
+<span id="more"></span>
+
 <h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>规范的提交信息通常分为 标题（Subject）、正文（Body） 和 结尾（Footer）：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;类型&gt;(&lt;作用域&gt;): &lt;主题&gt;</span><br><span class="line">&lt;空行&gt;</span><br><span class="line">&lt;正文&gt;</span><br><span class="line">&lt;空行&gt;</span><br><span class="line">&lt;结尾&gt;</span><br></pre></td></tr></table></figure>
 

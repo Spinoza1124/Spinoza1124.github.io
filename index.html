@@ -183,6 +183,85 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://spinoza1124.github.io/2025/04/15/Markdown%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Spinoza">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spinoza's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/04/15/Markdown%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Markdown语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-04-15 17:52:27 / 修改时间：17:56:13" itemprop="dateCreated datePublished" datetime="2025-04-15T17:52:27+08:00">2025-04-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown/" itemprop="url" rel="index"><span itemprop="name">Markdown</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/" itemprop="url" rel="index"><span itemprop="name">编程规范</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Markdown 是一种轻量级的标记语言，广泛用于编写文档、博客和技术文章。掌握 Markdown 语法可以帮助你快速创建格式化的文本。可以显著提高文档的可读性和可维护性。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/04/15/Markdown%E8%AF%AD%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://spinoza1124.github.io/2025/04/15/%E5%A6%82%E4%BD%95%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83%E7%9A%84Git-Commit/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -208,7 +287,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-04-15 17:15:50 / 修改时间：17:39:57" itemprop="dateCreated datePublished" datetime="2025-04-15T17:15:50+08:00">2025-04-15</time>
+              <time title="创建时间：2025-04-15 17:15:50 / 修改时间：17:51:15" itemprop="dateCreated datePublished" datetime="2025-04-15T17:15:50+08:00">2025-04-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,64 +315,14 @@
 
       
           <p>编写规范的 Git Commit 信息是团队协作和项目管理的重要实践，它能让代码历史清晰可读，方便回溯问题、生成变更日志，甚至自动化版本管理。但令绝大多数人头疼的是，Git Commit 信息的规范并没有一个统一的标准。不同的团队、项目和个人都有自己的习惯和风格。<br>在这里，我将介绍一些常见的 Git Commit 信息规范和最佳实践，帮助你编写出更清晰、更易读的 Commit 信息。</p>
-<h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>规范的提交信息通常分为 标题（Subject）、正文（Body） 和 结尾（Footer）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;类型&gt;(&lt;作用域&gt;): &lt;主题&gt;</span><br><span class="line">&lt;空行&gt;</span><br><span class="line">&lt;正文&gt;</span><br><span class="line">&lt;空行&gt;</span><br><span class="line">&lt;结尾&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="核心要素"><a href="#核心要素" class="headerlink" title="核心要素"></a>核心要素</h2><p><strong>（1）类型（Type）</strong></p>
-<ul>
-<li>feat: 新增功能（feature）</li>
-<li>fix: 修复问题（bug fix）</li>
-<li>docs: 文档更新（documentation）</li>
-<li>style: 代码格式调整（不影响逻辑，如空格、分号）</li>
-<li>refactor: 重构代码（非功能新增，也非问题修复）</li>
-<li>test: 测试相关（新增或修改测试用例）</li>
-<li>chore: 构建&#x2F;工具&#x2F;配置等杂项更新</li>
-<li>perf: 性能优化</li>
-<li>ci: 持续集成相关（如 GitHub Actions）</li>
-<li>build: 构建系统或依赖变更（如 npm、Maven）</li>
-<li>revert: 回滚某次提交</li>
-</ul>
-<p><strong>（2） 主题（Subject）</strong></p>
-<ul>
-<li>简洁清晰：控制在 50 字符以内，描述“做了什么”。</li>
-<li>使用祈使语气：如“Add”而非“Added”或“Adds”。</li>
-<li>首字母小写，结尾不加句号。</li>
-<li>可选作用域：说明影响范围（如模块、组件），例如 <code>fix(login):</code></li>
-</ul>
-<p>示例:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">feat(auth): add OAuth2 login support</span><br><span class="line">fix(api): handle null response in user endpoint</span><br></pre></td></tr></table></figure>
-
-<p><strong>（3）正文（Body）（非必需，但复杂变更需补充）</strong></p>
-<ul>
-<li>解释“为什么”修改：动机、背景、与之前行为的对比。</li>
-<li>每行不超过 72 字符，段落用空行分隔。</li>
-<li>使用列表（- 或 *）或代码块（&#96;&#96;&#96;）提升可读性。</li>
-</ul>
-<p>示例:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- Replace deprecated API `getUserInfo` with `fetchUserProfile`.</span><br><span class="line">- Add error logging for failed authentication attempts.</span><br></pre></td></tr></table></figure>
-
-<p><strong>（4）结尾（Footer）（非必需）</strong></p>
-<ul>
-<li>关联 Issue：如 Closes #123、Fixes JIRA-456。</li>
-<li>重大变更（BREAKING CHANGE）：标明不兼容的改动，说明迁移方法。</li>
-</ul>
-<p>示例:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BREAKING CHANGE: Remove support for legacy API v1.</span><br><span class="line">Migration guide: https://example.com/migration/v2</span><br><span class="line">Closes #45</span><br></pre></td></tr></table></figure>
-
-<h2 id="优秀示例"><a href="#优秀示例" class="headerlink" title="优秀示例"></a>优秀示例</h2><p><strong>简单修复：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fix: prevent infinite loop in data parser</span><br></pre></td></tr></table></figure>
-<p><strong>复杂功能：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">feat(payment): integrate Stripe API</span><br><span class="line"></span><br><span class="line">- Add Stripe SDK dependency</span><br><span class="line">- Implement payment intent creation</span><br><span class="line">- Handle webhook events for failed charges</span><br><span class="line"></span><br><span class="line">Closes #102</span><br><span class="line">BREAKING CHANGE: Remove PayPal support due to API deprecation.</span><br></pre></td></tr></table></figure>
-
-<h2 id="避免常见错误"><a href="#避免常见错误" class="headerlink" title="避免常见错误"></a>避免常见错误</h2><ul>
-<li><p>❌ 模糊描述：<code>Update file.js</code> → ✅ <code>fix: resolve image upload timeout</code></p>
-</li>
-<li><p>❌ 冗长标题：<code>Change the way we handle errors in...</code>（超过 50 字符）</p>
-</li>
-<li><p>❌ 忽略正文：未说明为何重构代码或修复逻辑。</p>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/04/15/%E5%A6%82%E4%BD%95%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83%E7%9A%84Git-Commit/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -954,20 +983,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
