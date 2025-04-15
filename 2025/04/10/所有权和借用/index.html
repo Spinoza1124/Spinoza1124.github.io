@@ -23,7 +23,7 @@
   <meta name="description" content="Rust的所有权和借用内存回收是编程语言设计的重点之一，如今的计算机语言中，关于内存回收的机制出现三种流派：  垃圾回收机制 （Garbage Collection），在程序运行时自动回收不再使用的内存。 手动管理内存的分配和释放，在程序中，通过函数调用的方式申请和释放内存。 通过所有权来管理内存的分配和释放，Rust就是这种语言。  一段不安全的代码 123456int* foo() &amp;#123">
 <meta property="og:type" content="article">
 <meta property="og:title" content="所有权和借用">
-<meta property="og:url" content="https://spinoza1124.github.io/2025/04/10/ownership-and-borrowing/index.html">
+<meta property="og:url" content="https://spinoza1124.github.io/2025/04/10/%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8/index.html">
 <meta property="og:site_name" content="Spinoza&#39;s Blog">
 <meta property="og:description" content="Rust的所有权和借用内存回收是编程语言设计的重点之一，如今的计算机语言中，关于内存回收的机制出现三种流派：  垃圾回收机制 （Garbage Collection），在程序运行时自动回收不再使用的内存。 手动管理内存的分配和释放，在程序中，通过函数调用的方式申请和释放内存。 通过所有权来管理内存的分配和释放，Rust就是这种语言。  一段不安全的代码 123456int* foo() &amp;#123">
 <meta property="og:locale" content="zh_CN">
@@ -33,7 +33,7 @@
 <meta property="article:tag" content="Rust">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://spinoza1124.github.io/2025/04/10/ownership-and-borrowing/">
+<link rel="canonical" href="https://spinoza1124.github.io/2025/04/10/%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -189,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://spinoza1124.github.io/2025/04/10/ownership-and-borrowing/">
+    <link itemprop="mainEntityOfPage" href="https://spinoza1124.github.io/2025/04/10/%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -272,11 +272,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2025/04/08/cpp-notebook/" rel="prev" title="cpp笔记">
+    <a href="/2025/04/08/cpp%E7%AC%94%E8%AE%B0/" rel="prev" title="cpp笔记">
       <i class="fa fa-chevron-left"></i> cpp笔记
     </a></div>
       <div class="post-nav-item">
-    <a href="/2025/04/10/why-dangling-references-are-unsafe-in-rust-md/" rel="next" title="为什么悬垂指针在rust里是不安全的">
+    <a href="/2025/04/10/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%82%AC%E5%9E%82%E6%8C%87%E9%92%88%E5%9C%A8rust%E9%87%8C%E6%98%AF%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84/" rel="next" title="为什么悬垂指针在rust里是不安全的">
       为什么悬垂指针在rust里是不安全的 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -353,20 +353,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

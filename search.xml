@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Makefile教程</title>
-    <url>/2025/04/08/Makefile-tutorial/</url>
+    <url>/2025/04/08/Makefile%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p>Makefile是一个自动化构建工具，通常用于编译和链接程序。它通过定义规则和依赖关系来自动化构建过程，从而简化了软件开发中的重复性任务。<br>Makefile的基本结构包括目标、依赖和命令。目标是要生成的文件，依赖是生成目标所需的文件，命令是在生成目标时执行的操作。</p>
 <span id="more"></span>
 
@@ -70,7 +70,7 @@
   </entry>
   <entry>
     <title>cpp笔记</title>
-    <url>/2025/04/08/cpp-notebook/</url>
+    <url>/2025/04/08/cpp%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
 <li>单行注释：<code>//</code></li>
 <li>多行注释：<code>/* 注释内容 */</code></li>
@@ -152,37 +152,8 @@
       </tags>
   </entry>
   <entry>
-    <title>所有权和借用</title>
-    <url>/2025/04/10/ownership-and-borrowing/</url>
-    <content><![CDATA[<h1 id="Rust的所有权和借用"><a href="#Rust的所有权和借用" class="headerlink" title="Rust的所有权和借用"></a>Rust的所有权和借用</h1><p>内存回收是编程语言设计的重点之一，如今的计算机语言中，关于内存回收的机制出现三种流派：</p>
-<ul>
-<li>垃圾回收机制 （Garbage Collection），在程序运行时自动回收不再使用的内存。</li>
-<li>手动管理内存的分配和释放，在程序中，通过函数调用的方式申请和释放内存。</li>
-<li>通过所有权来管理内存的分配和释放，Rust就是这种语言。</li>
-</ul>
-<p><strong>一段不安全的代码</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="title function_">foo</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    a = <span class="number">100</span>;</span><br><span class="line">    <span class="type">char</span> *c = <span class="string">&quot;xyz&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面的代码中，a是局部变量，当函数结束后将局部变量a的地址返回，a存在栈中，在离开作用域后，a所申请的栈上内存会被系统回收，从而造成了悬空指针的错误。这是一个非常典型的内存安全的问题。虽然编译可以通过，但是运行的时候会出现错误。<br>再来看变量c，c的值是常量字符串，存储于常量区，我们可能只用一次，但必须”xyz”只有当整个程序结束后才会回收这片内存。</p>
-<span id="more"></span>
-<h2 id="栈和堆"><a href="#栈和堆" class="headerlink" title="栈和堆"></a>栈和堆</h2><p>对于大小为止或可能变换的数据，我们需要存储在堆上。当向堆上放入数据时，需要请求一定大小的内存空间。操作系统在堆的某处找到一块足够大的空位，把它标记为已使用，并返回一个表示该位置地址的指针，该过程被称为在堆上分配内存，有时简称为 “分配”(allocating)。</p>
-<p>接着，该指针会被推入栈中，因为指针的大小是已知且固定的，在后续使用过程中，你将通过栈中的指针，来获取数据在堆上的实际内存位置，进而访问该数据。</p>
-<p><strong>所有权原则</strong></p>
-<ul>
-<li>Rust 中每一个值都被一个变量所拥有，该变量被称为值的所有者</li>
-<li>一个值同时只能被一个变量所拥有，或者说一个值只能拥有一个所有者</li>
-<li>当所有者（变量）离开作用域范围时，这个值将被丢弃(drop)</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Rust</category>
-      </categories>
-      <tags>
-        <tag>Rust</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vim快捷键</title>
-    <url>/2025/04/04/vim-shortcut-keys/</url>
+    <url>/2025/04/04/vim%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
     <content><![CDATA[<h2 id="vim键盘图"><a href="#vim键盘图" class="headerlink" title="vim键盘图"></a>vim键盘图</h2><p><img src="/images/image.jpg" alt="vim键盘图"></p>
 <span id="more"></span>
 <h3 id="vim快捷键"><a href="#vim快捷键" class="headerlink" title="vim快捷键"></a>vim快捷键</h3><h4 id="如何使用vimv"><a href="#如何使用vimv" class="headerlink" title="如何使用vimv"></a>如何使用vimv</h4><p>在终端中输入<code>vim</code>命令，进入vim编辑器。vim有三种模式：普通模式、插入模式和命令模式。</p>
@@ -448,7 +419,7 @@
   </entry>
   <entry>
     <title>vscode快捷键</title>
-    <url>/2025/04/08/vscode-shortcut-keys/</url>
+    <url>/2025/04/08/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
     <content><![CDATA[<span id="more"></span>
 <h3 id="工作区快捷键"><a href="#工作区快捷键" class="headerlink" title="工作区快捷键"></a>工作区快捷键</h3><table>
 <thead>
@@ -548,7 +519,7 @@
   </entry>
   <entry>
     <title>为什么悬垂指针在rust里是不安全的</title>
-    <url>/2025/04/10/why-dangling-references-are-unsafe-in-rust-md/</url>
+    <url>/2025/04/10/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%82%AC%E5%9E%82%E6%8C%87%E9%92%88%E5%9C%A8rust%E9%87%8C%E6%98%AF%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84/</url>
     <content><![CDATA[<p>在 Rust 中，<strong>悬垂引用（Dangling Reference）</strong> 是一种严重的内存安全问题，因为它会导致程序访问已释放或无效的内存，从而引发未定义行为（Undefined Behavior, UB）。Rust 的所有权系统和借用检查器（Borrow Checker）的核心目标之一就是<strong>在编译时彻底杜绝悬垂引用</strong>。以下是详细解释：</p>
 <hr>
 <h3 id="1-什么是悬垂引用？"><a href="#1-什么是悬垂引用？" class="headerlink" title="1. 什么是悬垂引用？"></a>1. <strong>什么是悬垂引用？</strong></h3><p>悬垂引用是指一个指针或引用指向的内存地址<strong>已被释放或不再有效</strong>，但程序仍尝试通过该引用访问数据。例如：</p>
@@ -601,6 +572,105 @@
         <tag>内存安全</tag>
         <tag>悬垂引用</tag>
         <tag>生命周期</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何书写规范的Git Commit</title>
+    <url>/2025/04/15/%E5%A6%82%E4%BD%95%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83%E7%9A%84Git-Commit/</url>
+    <content><![CDATA[<p>编写规范的 Git Commit 信息是团队协作和项目管理的重要实践，它能让代码历史清晰可读，方便回溯问题、生成变更日志，甚至自动化版本管理。但令绝大多数人头疼的是，Git Commit 信息的规范并没有一个统一的标准。不同的团队、项目和个人都有自己的习惯和风格。<br>在这里，我将介绍一些常见的 Git Commit 信息规范和最佳实践，帮助你编写出更清晰、更易读的 Commit 信息。</p>
+<h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>规范的提交信息通常分为 标题（Subject）、正文（Body） 和 结尾（Footer）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;类型&gt;(&lt;作用域&gt;): &lt;主题&gt;</span><br><span class="line">&lt;空行&gt;</span><br><span class="line">&lt;正文&gt;</span><br><span class="line">&lt;空行&gt;</span><br><span class="line">&lt;结尾&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="核心要素"><a href="#核心要素" class="headerlink" title="核心要素"></a>核心要素</h2><p><strong>（1）类型（Type）</strong></p>
+<ul>
+<li>feat: 新增功能（feature）</li>
+<li>fix: 修复问题（bug fix）</li>
+<li>docs: 文档更新（documentation）</li>
+<li>style: 代码格式调整（不影响逻辑，如空格、分号）</li>
+<li>refactor: 重构代码（非功能新增，也非问题修复）</li>
+<li>test: 测试相关（新增或修改测试用例）</li>
+<li>chore: 构建&#x2F;工具&#x2F;配置等杂项更新</li>
+<li>perf: 性能优化</li>
+<li>ci: 持续集成相关（如 GitHub Actions）</li>
+<li>build: 构建系统或依赖变更（如 npm、Maven）</li>
+<li>revert: 回滚某次提交</li>
+</ul>
+<p><strong>（2） 主题（Subject）</strong></p>
+<ul>
+<li>简洁清晰：控制在 50 字符以内，描述“做了什么”。</li>
+<li>使用祈使语气：如“Add”而非“Added”或“Adds”。</li>
+<li>首字母小写，结尾不加句号。</li>
+<li>可选作用域：说明影响范围（如模块、组件），例如 <code>fix(login):</code></li>
+</ul>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feat(auth): add OAuth2 login support</span><br><span class="line">fix(api): handle null response in user endpoint</span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）正文（Body）（非必需，但复杂变更需补充）</strong></p>
+<ul>
+<li>解释“为什么”修改：动机、背景、与之前行为的对比。</li>
+<li>每行不超过 72 字符，段落用空行分隔。</li>
+<li>使用列表（- 或 *）或代码块（&#96;&#96;&#96;）提升可读性。</li>
+</ul>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Replace deprecated API `getUserInfo` with `fetchUserProfile`.</span><br><span class="line">- Add error logging for failed authentication attempts.</span><br></pre></td></tr></table></figure>
+
+<p><strong>（4）结尾（Footer）（非必需）</strong></p>
+<ul>
+<li>关联 Issue：如 Closes #123、Fixes JIRA-456。</li>
+<li>重大变更（BREAKING CHANGE）：标明不兼容的改动，说明迁移方法。</li>
+</ul>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BREAKING CHANGE: Remove support for legacy API v1.</span><br><span class="line">Migration guide: https://example.com/migration/v2</span><br><span class="line">Closes #45</span><br></pre></td></tr></table></figure>
+
+<h2 id="优秀示例"><a href="#优秀示例" class="headerlink" title="优秀示例"></a>优秀示例</h2><p><strong>简单修复：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fix: prevent infinite loop in data parser</span><br></pre></td></tr></table></figure>
+<p><strong>复杂功能：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feat(payment): integrate Stripe API</span><br><span class="line"></span><br><span class="line">- Add Stripe SDK dependency</span><br><span class="line">- Implement payment intent creation</span><br><span class="line">- Handle webhook events for failed charges</span><br><span class="line"></span><br><span class="line">Closes #102</span><br><span class="line">BREAKING CHANGE: Remove PayPal support due to API deprecation.</span><br></pre></td></tr></table></figure>
+
+<h2 id="避免常见错误"><a href="#避免常见错误" class="headerlink" title="避免常见错误"></a>避免常见错误</h2><ul>
+<li><p>❌ 模糊描述：<code>Update file.js</code> → ✅ <code>fix: resolve image upload timeout</code></p>
+</li>
+<li><p>❌ 冗长标题：<code>Change the way we handle errors in...</code>（超过 50 字符）</p>
+</li>
+<li><p>❌ 忽略正文：未说明为何重构代码或修复逻辑。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>编程规范</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>所有权和借用</title>
+    <url>/2025/04/10/%E6%89%80%E6%9C%89%E6%9D%83%E5%92%8C%E5%80%9F%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="Rust的所有权和借用"><a href="#Rust的所有权和借用" class="headerlink" title="Rust的所有权和借用"></a>Rust的所有权和借用</h1><p>内存回收是编程语言设计的重点之一，如今的计算机语言中，关于内存回收的机制出现三种流派：</p>
+<ul>
+<li>垃圾回收机制 （Garbage Collection），在程序运行时自动回收不再使用的内存。</li>
+<li>手动管理内存的分配和释放，在程序中，通过函数调用的方式申请和释放内存。</li>
+<li>通过所有权来管理内存的分配和释放，Rust就是这种语言。</li>
+</ul>
+<p><strong>一段不安全的代码</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="title function_">foo</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    a = <span class="number">100</span>;</span><br><span class="line">    <span class="type">char</span> *c = <span class="string">&quot;xyz&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码中，a是局部变量，当函数结束后将局部变量a的地址返回，a存在栈中，在离开作用域后，a所申请的栈上内存会被系统回收，从而造成了悬空指针的错误。这是一个非常典型的内存安全的问题。虽然编译可以通过，但是运行的时候会出现错误。<br>再来看变量c，c的值是常量字符串，存储于常量区，我们可能只用一次，但必须”xyz”只有当整个程序结束后才会回收这片内存。</p>
+<span id="more"></span>
+<h2 id="栈和堆"><a href="#栈和堆" class="headerlink" title="栈和堆"></a>栈和堆</h2><p>对于大小为止或可能变换的数据，我们需要存储在堆上。当向堆上放入数据时，需要请求一定大小的内存空间。操作系统在堆的某处找到一块足够大的空位，把它标记为已使用，并返回一个表示该位置地址的指针，该过程被称为在堆上分配内存，有时简称为 “分配”(allocating)。</p>
+<p>接着，该指针会被推入栈中，因为指针的大小是已知且固定的，在后续使用过程中，你将通过栈中的指针，来获取数据在堆上的实际内存位置，进而访问该数据。</p>
+<p><strong>所有权原则</strong></p>
+<ul>
+<li>Rust 中每一个值都被一个变量所拥有，该变量被称为值的所有者</li>
+<li>一个值同时只能被一个变量所拥有，或者说一个值只能拥有一个所有者</li>
+<li>当所有者（变量）离开作用域范围时，这个值将被丢弃(drop)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Rust</category>
+      </categories>
+      <tags>
+        <tag>Rust</tag>
       </tags>
   </entry>
 </search>
